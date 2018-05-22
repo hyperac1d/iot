@@ -10,7 +10,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 </head>
 <body>
-    <div id="app"></div>
+
+    <button class="btn waves-effect waves-light" align="center" onclick="firebaseSwitch(1)">LED ON
+    </button>
+    <button class="btn waves-effect waves-light" align="center" onclick="firebaseSwitch(2)">LED OFF
+    </button>
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -35,13 +39,7 @@
           baudRate: 9600
         });
     
-        <button class="btn waves-effect waves-light" onclick="firebaseSwitch(1)">LED ON
-            <i class="material-icons right">highlight</i>
-        </button>
-
-        <button class="btn waves-effect waves-light" onclick="firebaseSwitch(2)">LED OFF
-            <i class="material-icons right">highlight_off</i>
-        </button>
+        
 
         
         function firebaseSwitch(state){
