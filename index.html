@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 </head>
 <body>
     <div id="app"></div>
@@ -24,15 +29,21 @@
 	  };
 	  firebase.initializeApp(config);
       var controlRef = firebase.database().ref('control');
-      $('#app').html(`
-            <button onclick="firebaseSwitch(1)">LED ON</button>
-            <button onclick="firebaseSwitch(2)">LED OFF</button>
-        `);
+      
         var SerialPort = require('serialport');
         var port = new SerialPort('/dev/ttyACM0', {
           baudRate: 9600
         });
+    
+        <button class="btn waves-effect waves-light" onclick="firebaseSwitch(1)">LED ON
+            <i class="material-icons right">highlight</i>
+        </button>
 
+        <button class="btn waves-effect waves-light" onclick="firebaseSwitch(2)">LED OFF
+            <i class="material-icons right">highlight_off</i>
+        </button>
+
+        
         function firebaseSwitch(state){
             switch(state){
                 case 1: 
